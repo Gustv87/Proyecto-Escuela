@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Views.ViewAsistencia"
+             xmlns:local="clr-namespace:Proyecto.ViewModels"
+             BackgroundColor="White"
+             Title="Asistencia">
+    <ContentPage.BindingContext>
+        <local:ViewModelAsistencia></local:ViewModelAsistencia>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <!--Grid de las filas-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--Grid de las Columnas-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="310"></ColumnDefinition>
+                    <ColumnDefinition Width="90"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!--Texto de los titulos de la tabla-->
+                <Label Text="Nombre del Alumno"  TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Asistencia"  TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="1"/>
+                <BoxView Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" HeightRequest="1" BackgroundColor="Black"/>
+
+
+            </Grid>
+            
+            <ListView ItemsSource="{Binding listaAsistencia}">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="250"/>
+                                    <ColumnDefinition Width="200"/>
+                                </Grid.ColumnDefinitions>
+                                <BoxView Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" BackgroundColor="#f9ff1f"/>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding nombre_completo}"  HorizontalTextAlignment="Start"  TextColor="Black"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding id_alumno}"  HorizontalTextAlignment="Center"  TextColor="Black"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
