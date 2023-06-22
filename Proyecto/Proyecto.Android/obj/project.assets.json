@@ -3683,11 +3683,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto\\Proyecto\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
+      "projectUniqueName": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto-Escuela\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
       "projectName": "Proyecto.Android",
-      "projectPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto\\Proyecto\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
+      "projectPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto-Escuela\\Proyecto\\Proyecto.Android\\Proyecto.Android.csproj",
       "packagesPath": "C:\\Users\\potol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto\\Proyecto\\Proyecto\\Proyecto.Android\\obj\\",
+      "outputPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto-Escuela\\Proyecto\\Proyecto.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3708,8 +3708,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto\\Proyecto\\Proyecto\\Proyecto\\Proyecto.csproj": {
-              "projectPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto\\Proyecto\\Proyecto\\Proyecto\\Proyecto.csproj"
+            "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto-Escuela\\Proyecto\\Proyecto\\Proyecto.csproj": {
+              "projectPath": "C:\\Users\\potol\\OneDrive\\Desktop\\Proyecto-Escuela\\Proyecto\\Proyecto\\Proyecto.csproj"
             }
           }
         }

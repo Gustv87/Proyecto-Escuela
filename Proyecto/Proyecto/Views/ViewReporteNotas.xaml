@@ -10,7 +10,7 @@
     <ContentPage.BindingContext>
         <local:ViewModelReporteNotas></local:ViewModelReporteNotas>
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <StackLayout>
 
@@ -29,7 +29,7 @@
                 </Grid.ColumnDefinitions>
 
                 <!--Texto de los titulos de la tabla-->
-                <Label Text="Nombre" TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Nombre" TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="0" Padding="10"/>
                 <Label Text="1-P" TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="1"/>
                 <Label Text="2-P" TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="2"/>
                 <Label Text="3-P" TextColor="Black"  FontAttributes="Bold" FontSize="Default"  Grid.Row="0" Grid.Column="3"/>
@@ -38,35 +38,35 @@
 
 
             </Grid>
-
-            <ListView ItemsSource="{Binding listaReporteNota}">
-                <ListView.ItemTemplate >
+            <CollectionView ItemsSource="{Binding listaReporteNota}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <Grid>
+                        <Frame CornerRadius="40"
+                                       BackgroundColor="#f9ff1f">
+                            <Grid  >
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="40"/>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="230"/>
+                                    <ColumnDefinition Width="210"/>
                                     <ColumnDefinition Width="40"/>
                                     <ColumnDefinition Width="40"/>
                                     <ColumnDefinition Width="40"/>
                                 </Grid.ColumnDefinitions>
-                                <BoxView Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" BackgroundColor="#f9ff1f"/>
-                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding nombre_completo}"  TextColor="Black"></Label>
-                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding primer_parcial}"  TextColor="Black"></Label>
-                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding segundo_parcial}"  TextColor="Black"></Label>
-                                <Label Grid.Column="3" Grid.Row="0" Text="{Binding tercer_parcial}"  TextColor="Black"></Label>
-                                <Label Grid.Column="4" Grid.Row="0" Text="{Binding cuarto_parcial}"  TextColor="Black"></Label>
+                                <!--`<BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" BackgroundColor="#"/>-->
 
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding nombre_completo}" TextColor="Black"/>
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding primer_parcial}" TextColor="Black"/>
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding segundo_parcial}" TextColor="Black"/>
+                                <Label Grid.Column="3" Grid.Row="0" Text="{Binding tercer_parcial}" TextColor="Black"/>
+                                <Label Grid.Column="4" Grid.Row="0" Text="{Binding cuarto_parcial}" TextColor="Black"/>
                             </Grid>
-                        </ViewCell>
+                        </Frame>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
-
+</ContentPage>   

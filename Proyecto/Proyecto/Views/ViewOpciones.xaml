@@ -11,14 +11,43 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-            <Frame BackgroundColor="#06068c" CornerRadius="30" Padding="0">
-                <Button Command="{Binding Reporte_Notas}" Text="Reporte Notas" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" HorizontalOptions="Center" HeightRequest="60" WidthRequest="200"/>
+        <StackLayout VerticalOptions="Fill"
+                     Margin="20,80,20,0"
+                     Orientation="Vertical">
+            <Frame BackgroundColor="#06068c" CornerRadius="30" Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Reporte Notas" FontSize="16" TextColor="White" FontAttributes="Bold"
+                           VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" />
+
+                    <ImageButton Command="{Binding Reporte_Notas}" Source="Notas.jpg" CornerRadius="15"
+                                 BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="Center" 
+                                 HeightRequest="60" WidthRequest="200"/>
+                </Grid>
             </Frame>
-            
-            <Frame BackgroundColor="#06068c" CornerRadius="30" Padding="0">
-                <Button Command="{Binding Asistencia}" Text="Asistencia" TextColor="White" FontAttributes="Bold" BackgroundColor="Transparent" HorizontalOptions="Center" HeightRequest="60" WidthRequest="200"/>
+
+
+
+            <Frame BackgroundColor="#06068c" CornerRadius="30" Padding="20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Asistencia" FontSize="16" TextColor="White" FontAttributes="Bold" 
+                           VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="200" />
+
+                    <ImageButton Command="{Binding Asistencia}" Source="Asistencia.jpg" CornerRadius="15" 
+                                 BackgroundColor="Transparent" Grid.Column="1" HorizontalOptions="Center"
+                                 HeightRequest="60" WidthRequest="200"/>
+                </Grid>
             </Frame>
+
 
         </StackLayout>
     </ContentPage.Content>
