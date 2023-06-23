@@ -4,7 +4,7 @@
              x:Class="Proyecto.Views.ViewCursoClase"
              xmlns:local="clr-namespace:Proyecto.ViewModels"
              BackgroundColor="White"
-             Title="CursoClases">
+             Title="Mis cursos y Clases">
     <ContentPage.BindingContext>
         <local:ViewModelCursoClase></local:ViewModelCursoClase>
     </ContentPage.BindingContext>
