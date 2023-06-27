@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto.Views.ViewCursoClase"
+             xmlns:local="clr-namespace:Proyecto.ViewModels"
+             BackgroundColor="White"
+             Title="Mis Cursos y Clases">
+    <ContentPage.BindingContext>
+        <local:ViewModelCursoClase></local:ViewModelCursoClase>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Padding="5">
+                <!--Grid de las filas-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <!--Grid de las Columnas-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"></ColumnDefinition>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!--Texto de los titulos de la tabla-->
+                <BoxView Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" BackgroundColor="#f9ff1f"/>
+                <Label Text="Privado Rio Blanco" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  FontAttributes="Bold" FontSize="Small"  Grid.Row="0" Grid.Column="0"/>
+                <BoxView Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" HeightRequest="5" BackgroundColor="Black"/>
+
+            </Grid>
+            <CollectionView ItemsSource="{Binding listaCursoClase}"
+                            VerticalOptions="Center"
+                            Margin="20,0,20,0"
+                            SelectionMode="Single" 
+                            SelectedItem="{Binding CursoClaseSeleccionada}"
+                            SelectionChangedCommand="{Binding SelectCursoClase}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="1"
+                                     VerticalItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="15"
+                               BackgroundColor="#06068c">
+                            <Grid  >
+                                <!--Grid de las filas-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <!--Ver que hace el 40 en el width-->
+                                </Grid.RowDefinitions>
+
+                                <!--Grid de las Columnas-->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                    <ColumnDefinition Width="100"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <!--`<BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" BackgroundColor="#f9ff1f"/>-->
+                                    <Label Grid.Column="0" Grid.Row="0" Text="{Binding nombre_curso}"  TextColor="White" ></Label>
+                                <Label Grid.Column="2" Grid.Row="0" Text="{Binding nombre_clase}"  TextColor="White" ></Label>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+
